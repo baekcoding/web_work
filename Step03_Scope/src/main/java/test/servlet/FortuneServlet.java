@@ -30,7 +30,7 @@ public class FortuneServlet extends HttpServlet{
 		 * 
 		 * ex)
 		 * 예를 들어, "fortuneToday"라는 key값으로 String type을 담았다면
-		 * 얻어낼 때는 아래와 같은 코드가 된다. 
+		 * 얻어낼 때는 아래와 같은 코드가 된다.
 		 * String a = (String)request.getAttribute("fortuneToday");
 		 */
 		req.setAttribute("fortuneToday", fortune);
