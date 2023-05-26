@@ -34,6 +34,81 @@ public class MemberDao {
 		return dao;
 	}
 	
+	//회원 한명의 정보를 수정하는 메소드
+	public boolean update(MemberDto dto) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int rowCount = 0;
+		try {
+			conn = new DbcpBean().getConn();
+			String sql = "UPDATE member"
+					+ " SET name=?, addr=?"
+					+ " WHERE num=?";
+			pstmt = conn.prepareStatement(sql);
+			//실행할 sql문이 미완성이라면 여기서 완성
+			pstmt.setString(1, dto.getName());
+			pstmt.setString(2, dto.getAddr());
+			pstmt.setInt(3, dto.getNum());
+			//sql문을 수행하고 변화된(추가, 수정, 삭제된) row의 갯수 리턴 받기
+			rowCount = pstmt.executeUpdate();
+		} catch (SQLException se) {
+			se.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e) {
+			}
+		}
+		//만일 변화된 row의 갯수가 0보다 크면 작업 성공
+		if (rowCount > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	
+	//회원 한명의 정보를 리턴하는 메소드
+	public MemberDto getData(int num) {
+		MemberDto dto = null;
+		//필요한 객체의 참조값을 담을 지역변수 미리 만들기
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			conn = new DbcpBean().getConn();
+			String sql = "SELECT name, addr"
+					+ " FROM member"
+					+ " WHERE num=?";
+			pstmt = conn.prepareStatement(sql);
+			//실행할 sql문이 미완성이라면 여기서 완성
+			pstmt.setInt(1, num);
+			//sql문을 수행하고 변화된(추가, 수정, 삭제된) row의 갯수 리턴 받기
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				dto = new MemberDto();
+				dto.setNum(num);
+				dto.setName(rs.getString("name"));
+				dto.setAddr(rs.getString("addr"));
+			}
+		} catch (SQLException se) {
+			se.printStackTrace();
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null) 
+					conn.close();
+				} catch (Exception e) {
+				}
+			}
+			return dto;
+		}
+	
 	public boolean delete(int num){
 		Connection conn = null;
 		PreparedStatement pstmt = null;
