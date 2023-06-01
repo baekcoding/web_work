@@ -22,6 +22,7 @@
 			
 			console.log("-----");
 			
+			//response 객체 : fetch를 통해 요청했을때 웹서버가 응답한 결과를 담고 있는 객체
 			//fetch는 return할때 Promise 타입으로 return한다.
 			fetch("${pageContext.request.contextPath}/index.jsp")
 			.then(function(response){
