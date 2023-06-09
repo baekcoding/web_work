@@ -22,7 +22,7 @@
 		 <form action="upload.jsp" method="post" enctype="multipart/form-data">
 		 	<div>
 		 		<label for="title">제목</label>
-		 		<input type="text" name="title" id="myFile"/>
+		 		<input type="text" name="title" id="title"/>
 		 	</div>
 		 	<div>
 		 		<label for="myFile">첨부파일</label>
