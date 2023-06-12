@@ -7,7 +7,25 @@ public class CafeDto {
 	private String content;
 	private int viewCount;
 	private String regdate;
+	private int startRowNum;
+	private int endRowNum;
 	
+	public int getStartRowNum() {
+		return startRowNum;
+	}
+
+	public void setStartRowNum(int startRowNum) {
+		this.startRowNum = startRowNum;
+	}
+
+	public int getEndRowNum() {
+		return endRowNum;
+	}
+
+	public void setEndRowNum(int endRowNum) {
+		this.endRowNum = endRowNum;
+	}
+
 	//생성자
 	public CafeDto() {}
 
