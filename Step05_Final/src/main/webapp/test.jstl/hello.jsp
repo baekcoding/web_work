@@ -23,7 +23,7 @@
 <body>
 	<h1>JSTL의 core 라이브러리 사용해 보기</h1>
 	<c:forEach var="i" begin="0" end="9" step="1">
-		<p>안녕 JSTL <strong>${i}</strong></p>	
+		<p>안녕 JSTL <strong>${i}</strong></p>
 	</c:forEach>
 	
 	<h1>JSTL을 사용하지 않고 java code를 활용해서 위와 같은 동작 만들기</h1>
