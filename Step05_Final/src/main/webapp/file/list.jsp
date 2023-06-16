@@ -50,18 +50,22 @@
    String id = (String)session.getAttribute("id");
 %>
 <body>
+	<jsp:include page="/include/navbar.jsp">
+		<jsp:param value="cafe" name="current"/>
+	</jsp:include>
    <div class="container">
       <a href="${pageContext.request.contextPath}/file/private/upload_form.jsp">업로드 하기</a>
       <br />
       <a href="${pageContext.request.contextPath}/file/private/upload_form2.jsp">ajax 업로드 하기</a>
       <h1>자료실 목록</h1>
-      <table class="table">
+      <table class="table table-striped">
          <thead class="table-light">
             <tr>
                <th>번호</th>
                <th>작성자</th>
                <th>제목</th>
                <th>파일명</th>
+               <th>파일크기</th>
                <th>등록일</th>
                <th>삭제</th>
             </tr>
@@ -75,6 +79,7 @@
                <td>
                   <a href="download.jsp?num=<%=f.getNum()%>"><%=f.getOrgFileName() %></a>
                </td>
+               <td><%=f.getFileSize() %> byte</td>
                <td><%=f.getRegdate() %></td>
                <td>
                <%if(f.getWriter().equals(id)){%>
