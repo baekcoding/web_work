@@ -1,0 +1,49 @@
+html은 head와 body로 구성된다.
+head에는 meta 정보와 title이 포함되어 있다.
+body에는 script, display 정보가 block(위에서 아래)인 hn, p, div
+display 정보가 inline인 span, img, button 등이 기재될 수 있다.
+
+css는 꾸며주는 역할로 head 내에 위치하며  title 바로 밑에 위치한다.
+<style></style>
+
+javascript는 동적인 기능을 만들 때 주로 사용하며
+<body> 내에서 1. button 요소의 onclick 이벤트를 작동할 때
+2. <body> 내 <script> 요소를 만들어 함수를 설정했을 때(웹의 console 창에서
+함수 호출 시 작동)
+3. 기존에 설정한 함수를 호출했을 때(웹을 켜면 바로 작동)
+
+이미지를 넣고 싶을땐 html 내 body 요소에 <img>를 넣으며
+경로와 설명을 추가하기 위해 "src"와 "alt"를 넣어
+<img src="경로명" alt="간단한 설명"> 형식으로 넣는다.
+
+html 에서는 계행을 넣을 때 \n이 아닌 <br>을 넣는다.
+
+css(html > head > style)에서 class를 꾸미고 싶을 때는 앞에 선택자로 "."를 넣어주고
+ex) .my-button{}
+
+아이디를 꾸미고 싶을 때는 앞에 선택자로 "#"을 넣어준다. 아이디가 요소안에 포함된
+속성이라면 다음과 같이 표현한다.  ex) #two>img
+
+* 블록 요소와 인라인 요소
+- 블록 요소 : div, table, hn, p, ul, ol, li, di, dt, dd 등
+- 인라인 요소 : span, a, br, em, strong, img 등
+
+div, p 모두 문단을 나타낼 때 사용한다.(block 요소)
+div는 p의 상위 개념으로 div는 p를 포함할 수 있지만, p는 div를 포함할 수 없다.
+
+span은 인라인 요소기 때문에 폭이 block 요소보다 좁다.(폭=문자 길이 만큼)
+따라서 span은 block 요소(div, p)를 포함할 수 없으며, div와 p는 span을 포함할 수 있다.
+(span은 다른 인라인 요소만 포함 가능)
+
+ul은 자식 요소로 li(리스트)를 달고 다닌다.
+
+a는 단어에 링크를 달아주는(like 하이퍼링크) 요소
+
+dl은 자식 요소로 dt(제목)와 dd(설명)를 달고 다닌다.
+
+table은 표로 tr(table row(행)), th(table head(표 제목, 주로 1행에 위치), td(표 내용)가 포함
+
+표의 제목은 body > table > caption으로 나타낸다.
+
+칼럼 폭 조절은 body > table > colgroup으로 한다.
+

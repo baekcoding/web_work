@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>/member/delete.jsp</title>
+</head>
+<body>
+   <div class="container">
+      <h1>알림</h1>
+      <%if(isSuccess){ %>
+         <p>
+            <strong><%=num %></strong> 번 회원의 정보를 삭제 했습니다.
+            <a href="list.jsp">목록보기</a>
+         </p>
+      <%}else{ %>
+         <p>
+            삭제 실패!
+            <a href="list.jsp">목록보기</a>
+         </p>
+      <%} %>
+   </div>
+</body>
+</html>
+
+
+
+----방명록 테이블
+CREATE TABLE board_guest(
+num NUMBER PRIMARY KEY,
+writer VARCHAR2(30) NOT NULL,
+content VARCHAR2(100) NOT NULL,
+pwd VARCHAR2(10) NOT NULL,
+regdate DATE);
+
+num, writer, content, pwd, regdate
+번호,작성자, 내용,      비밀번호, 등록일
+
+----방명록의 글번호를 얻어낼 시퀀스
+CREATE SEQUENCE board_guest_seq;
+
+-요구조건
+1. 글번호는 시퀀스로 넣는다.
+2. 글 작성날짜는 오라클 SYSDATE 함수를 이용해서 넣는다.
+3. 글 내용은 textarea 요소를 이용해서 입력받는다.
+4. 글 목록은 전체글의 번호, 작성자, 내용, 등록일이 나오면 된다.
+5. 글 수정, 삭제 기능을 제공하되 DB에 저장된 비밀번호가 일치하지 않으면 수정, 삭제가 안되도록 하기
+
+test.guest.dto 패키지에 GuestDto 클래스 만들기
+test.guest.dao 패키지에 GuestDao 클래스 만들기
+
+webapp/guest/list.jsp, insertform.jsp, insert.jsp, updateform.jsp, update.jsp, delete.jsp
+
+형태로 jsp 페이지를 만들면 된다.
+
+기능을 먼저 완성하고 추후 bootcss도 적용
+
+~~ 5/25 오전 10시30분까지

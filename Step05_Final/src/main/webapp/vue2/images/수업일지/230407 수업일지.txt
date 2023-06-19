@@ -1,0 +1,28 @@
+label 속성의 for과 input 속성의 id가 일치해야 라벨의 innertext가 input에 인식됨
+(장애인들을 위한 웹접근성 용도)
+
+서버에 들어간 정보들이 form의 action을 통해 모여져 있다가 실행된다.
+
+a(anchor)의 또 다른 기능
+
+<a href="javascript:_______">innertext</a>
+___도 자바스크립트 영역이며 innertext 클릭시 자바스크립트 명령대로 동작이 수행된다.
+
+<a href="tel:_____">innertext</a>
+폰에서 innertext 클릭시 기재된 번호로 전화가 걸어진다.
+
+<a href="mailto:_____">innertext</a>
+innertext 클릭시 메일 어플리케이션이 실행된다.
+
+git에서 HEAD는 커서, master는 branch pointer
+
+javascript는 head든 body든 어디든 넣을 수 있지만 일반적으로 body 맨 밑에 넣는다.
+(화면이 모두 구성되고 나서 동작하는게 효율적이기 때문)
+
+javascript가 필요한 이유?
+- 웹브라우저의 동작을 미리 준비해야 하는 경우
+- 동작은 예를 들면 > 색상이 변한다 > 어떤 색상으로 변할 것인지?
+                        > 크기가 변한다 > 어떤 크기로 변할 것인지?
+                        > 문자열을 서버에 전송한다 > 어떤 문자열을 전송할 것인지?
+                        > 숨겨졌던 메뉴가 나타난다 > 어느 시점에 나타날 것인지?
+                        > 주기적으로 사진이 교체된다 > 어떤 주기로 교체되는지?

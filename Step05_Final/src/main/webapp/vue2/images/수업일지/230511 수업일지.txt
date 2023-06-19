@@ -1,0 +1,29 @@
+* 깃허브 저장소에서 eclipse로 가져오는 방법
+
+1. 깃허브에서 원하는 저장소의 주소 복사
+
+2. AnotherComputer 폴더에서 깃 bash 열어서 'git clone (복사주소)'
+
+3. AnotherComputer 폴더에 클론한 폴더가 아닌 다른 폴더 하나 추가(java_work2)
+
+4. 이클립스에서 file > Switch Workspace > other... 클릭
+
+5. java_work2 폴더로 변경
+
+6. git 모드에서 'add an existing local git repository to this view' 클릭
+(이미 bash에서 clone한 상태이므로 2번 clone은 생략)
+
+7. 추가된 폴더의 Working Tree에서 폴더 1개씩 import에서 사용
+(여러개 한번에 import 안됨)
+
+
+* Thread(작업 단위)
+
+- run을 누르면 main 메소드에서 시작되는 작업 단위가 있는데
+  그 작업 단위를 main thread(메인 스레드)라고 부른다.
+
+- 특별히 작업 단위를 늘이지 않는 이상 하나의 작업단위만 존재한다.
+
+* Input / Output
+- 입력 대상 : keyboard, file, network
+- 출력 대상 : console, file, network

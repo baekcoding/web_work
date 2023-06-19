@@ -1,0 +1,14 @@
+HashMap은 generic 클래스로 2개의 타입을 지정해줘야 한다.(key 타입, value 타입)
+
+key 타입은 거의 매번 String 타입, value 타입은 거의 매번 Object 타입을 쓴다.
+-> 문자열을 키값으로 해서 원하는 어떤 type의 value도 저장할 수 있다.
+ex) Object a = 10;
+             = 10.1;
+             = "kim";
+
+
+try{
+
+} catch {
+  예외가 발생할 경우 여기 내용이 실행된다.
+}

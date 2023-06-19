@@ -1,0 +1,29 @@
+* 웹브라우저 동작을 프로그래밍 하기 위해
+js에서 사용하는 data type 을 익혀야 한다.
+
+- number, string, boolean, object, array, function, undefined
+
+object, array, function 유형은 선언 시 사물함이 만들어진다.
+
+변수에 다른 변수를 대입하면 그 사물함의 열쇠가 복사되어 전달된다.
+
+so 변수1에서 데이터를 변경하면 복사된 변수2에서도 데이터가 변경된다.
+
+* 메모리 안의 stack 영역과 heap 영역 구분
+
+사물함 : heap 영역
+
+값을 보관하기 위해 만드는 변수 : stack 영역에 만들어 진다.
+
+빌트인 함수 alert에 string type인 'KIM'을 대입하면
+
+alert() 호출 시 에러가 뜬다.(함수가 무너짐)
+
+
+document도 object type의 일종
+
+<style>
+.box{
+transition: margin-left 1s linear;   1초동안 직선으로 움직이기
+}
+</style>

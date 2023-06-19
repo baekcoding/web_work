@@ -1,0 +1,44 @@
+* Java Resources(Servlet)
+- 자바 관련 코딩을 할 수 있다.
+
+* 웹앱
+- 웹앱에 있는 모든 파일들은 클라이언트가 요청에 의해 가져갈 수 있다.
+(META-INF, WEB-INF 제외)
+- jsp 페이지 작성 가능
+
+*이클립스의 run 버튼을 눌렀을때
+1. Tomcat 서버에 index.html 페이지가 포함된 프로젝트를 add시킨다.
+2. Tomcat 서버를 start 시킨다.
+3. 웹브라우저를 실행시키면서 요청할 경로(선택된 html 또는 jsp 페이지)를 전달해준다.
+
+
+(MemberServlet.java 클래스 흐름에 대한 설명)
+클라이언트가 /member/list 경로로 요청을 해오면
+우리가 만든 MemberListServlet 클래스로
+생성된 객체가 응답을 한다.
+
+* 이클립스 내용 깃허브에 새로 저장할때
+
+- 이클립스 git 모드에서 "create a new Git Repository and add it to this View" 클릭
+
+- gitignore.io 들어가서 "Windows", "Java", "Eclipse" 추가해서 생성
+
+- 이클립스의 Working Tree > ".gitignore" 문서에 생성내용 복붙
+
+- ".classpath", ".project", "/Servers/" 내용 추가
+
+- add 및 commit 하기
+
+- 깃허브에서 저장소 생성하여 주소 따기
+
+- Remotes를 우클릭하여 create remote 클릭 > git init할 위치 선택
+   및 따온 주소 복사하여 create 및 push
+user name : baekcoding
+password : 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
+
+
+/Step01Servlet/send?msg=hello
+
+/Step01Servlet : context path
+/send : request path(요청 경로)
+?msg=hello : GET request parameter

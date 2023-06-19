@@ -1,0 +1,11 @@
+페이지 로딩 시점에 시작되는 것들은 전역(global) 영역
+
+함수가 시작할 때만 실행되는 것들은 지역(local) 영역
+
+* git 명령어
+
+git restore --staged . : git add로 stage에 올라간 상태에서 내리기
+
+git restore . : 저장 후 변경된 내용 지우기(untracked 파일은 삭제 안됨)
+
+git clean -fd : untracked file 지우기

@@ -1,0 +1,14 @@
+git fetch origin master : 원격저장소(git hub)의 새로운 commit을 origin/master 브랜치로 내려받기
+
+git merge origin/master : origin/master 브랜치를 master 브랜치로 병합하기
+
+fetch와 merge 묶어서 한번에 처리 : pull
+
+
+SQL에서 NUT NULL은 칼럼 수준에서만 제약 조건 생성이 가능하다.
+
+SQL 기능
+1. ADD 칼럼정의
+2. MODIFY 칼럼정의
+3. RENAME COLUMN 칼럼명 TO 새칼럼명
+4. DROP COLUMN 칼럼명

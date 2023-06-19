@@ -1,0 +1,11 @@
+* Exception
+- Exception은 모든 Exception의 부모 type이다.
+
+- 예외의 종류는 크게 2가지로 분류할 수 있다.
+ 1. RuntimeException을 상속받은 예외
+   try~catch 블럭으로 감싸는 것은 option이다.
+
+ 2. RuntimeException을 상속받지 않은 예외
+   try~catch 블럭으로 감싸는 것은 의무이다.
+
+스레드(Thread) : 실행의 흐름(작업 단위라고도 함)

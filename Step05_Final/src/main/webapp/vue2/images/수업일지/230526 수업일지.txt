@@ -1,0 +1,13 @@
+반응형 페이지를 만드는 3가지 필수요건
+1. media query
+2. % 단위
+3. viewport 설정
+
+rem은 html 최상위 요소의 글자 크기를 의미하며,
+따로 수정하지 않는 이상 16px
+즉, 1rem = 16px 을 의미함
+
+padding, margin, width, height 등등 어떤 크기를 설정할때
+16px 대신에 1rem 이렇게 설정할 수 있다.(32px 대신 2rem)
+
+인덱스 페이지의 <jsp:include>는 index.jsp와 합동으로 응답할 수 있다.

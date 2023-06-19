@@ -1,0 +1,1 @@
+ArrayList<>()는 참조 데이터 타입만 담을 수 있다.(int, double 등 불가)

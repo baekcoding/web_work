@@ -1,0 +1,2 @@
+fetch : remote 저장소에 있는걸 local로 내려받는것
+pool : fetch와 merge를 동시에 하는것
